@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bulb Project</title>
+	<meta charset="utf-8">
+	<meta name="viewport" width="device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/bootstrap.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+	<script type="text/javascript">
+		function changePicture()
+		{
+			var image= document.getElementById('bulb1');
+			var light= document.getElementById('switch1');
+			if (image.src.match("bulb.png") && light.src.match("lightoff.jpg"))
+			{
+				image.src="Img/bulbon.jpg";
+				light.src="Img/lighton.jpg"
+			}
+			else{
+				image.src="Img/bulb.png";
+				light.src="Img/lightoff.jpg"
+			}
+		}
+	</script>
+	<style type="text/css">
+		img{
+			width:200px;
+			height:250px;
+		}
+		#switch1{
+			postion:fixed;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="Img/bulb.png" id="bulb1" "><br>
+		<img src="Img/lightoff.jpg" id="switch1" onclick="changePicture()">
+	</div>
+</body>
+	<script type="text/javascript" src="bootstrap4/tether/dist/js/tether.js"></script>
+	<script type="text/javascript" src="bootstrap4/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="bootstrap4/bootstrap.js"></script>
+</html>
